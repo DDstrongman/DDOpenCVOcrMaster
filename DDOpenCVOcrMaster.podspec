@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DDOpenCVOcrMaster'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'OpenCV and Ocr for IDCard and BankCard'
 
 # This description is used to generate tags and improve search results.
@@ -30,8 +30,8 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'Pod/Classes/**/*'
-  
+  s.source_files = 'Pod/Classes/**/*.{h,m,mm}'
+  s.resource = 'Pod/Classes/tessdata'
   # s.resource_bundles = {
   #   '${POD_NAME}' => ['${POD_NAME}/Assets/*.png']
   # }
@@ -40,7 +40,7 @@ TODO: Add long description of the pod here.
   # s.frameworks = 'UIKit', 'MapKit'
   # s.libraries  = 'libbankcard.a','libexidcardios.a'
   # s.vendored_libraries = 'Pod/Classes/libexidcard/*.a','Pod/Classes/Release-iphoneos/bank_io/exbankcardcore/*.a' 
-  s.dependency 'OpenCV'
+  s.dependency 'OpenCV','~>3.1.0.1'
   # s.vendored_frameworks = 'Pod/Classes/opencv2.framework'
   s.dependency 'TesseractOCRiOS'
 end
